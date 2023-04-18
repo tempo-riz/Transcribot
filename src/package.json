@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/tempo-riz/discord-voice-message-to-text#readme",
   "dependencies": {
+    "@deepgram/sdk": "^1.20.0",
     "@discordjs/core": "^0.5.2",
     "discord.js": "^14.9.0",
+    "dotenv": "^16.0.3",
     "https": "^1.0.0"
   }
 }
