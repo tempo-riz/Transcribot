@@ -1,0 +1,25 @@
+{
+  "name": "discord-voice-message-to-text",
+  "version": "1.0.0",
+  "description": "A discord bot transcripting those new audio messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tempo-riz/discord-voice-message-to-text.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tempo-riz/discord-voice-message-to-text/issues"
+  },
+  "homepage": "https://github.com/tempo-riz/discord-voice-message-to-text#readme",
+  "dependencies": {
+    "@discordjs/core": "^0.5.2",
+    "discord.js": "^14.9.0",
+    "https": "^1.0.0"
+  }
+}
