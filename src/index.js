@@ -79,6 +79,7 @@ bot.on('messageCreate', message => {
       console.log(text);
       const m = {
         text: text,
+        language: GUILD_SETTINGS.get(message.guild.id).language,
         author: message.author.username + "#" + message.author.discriminator,
         date: new Date().toISOString(),
         guild: message.guild.name,
@@ -106,6 +107,8 @@ bot.on('interactionCreate', async interaction => {
     commands.slice(1).forEach(command => {
       reply += `\n - ${command.name}: ${command.description}`;
     });
+    //add currently : flag, language, enable, disable
+    reply += `\n\nCurrent: ${COUNTRY_FLAGS[GUILD_SETTINGS.get(interaction.guild.id).language]} | ${GUILD_SETTINGS.get(interaction.guild.id).enabled ? "enabled" : "disabled"}`;
     await interaction.reply(reply);
 
   } else if (interaction.commandName === 'setlanguage') {
