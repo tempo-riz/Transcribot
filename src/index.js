@@ -31,7 +31,7 @@ bot.once(Events.ClientReady, async c => {
   bot.guilds.cache.forEach((guild) => {
     if (!GUILD_SETTINGS.has(guild.id)) {
       GUILD_SETTINGS.set(guild.id, { name: guild.name, language: 'fr', enabled: true });
-      updateServerSettings(guild.id, { name: guild.name, language: 'fr', enabled: true });
+      updateServerSettings(guild.id, GUILD_SETTINGS);
       console.log("[NEW]: " + guild.name);
     } else {
       console.log(guild.name);
@@ -100,6 +100,11 @@ bot.on('messageCreate', message => {
 
 bot.on('interactionCreate', async interaction => {
   if (!interaction.isCommand()) return;
+
+  if (!interaction.guildId) {
+    await interaction.reply({ content: 'Commands can only be used in a server!', ephemeral: true });
+    return;
+}
 
   if (interaction.commandName === 'help') {
     let reply = "Here's a list of all my commands:";
