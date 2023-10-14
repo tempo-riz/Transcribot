@@ -1,13 +1,16 @@
 # discord-voice-message-to-text
-A discord bot transcripting those new audio messages
 
+A simple Discord bot that transcribes voice messages to text in the following languages: English, French, Spanish, German.
+
+## Based on:
+- Discord.js
+- Deepgram's API
+- Firebase's realtime database
+- Hosted on Heroku
+
+## Resources
 https://discordjs.guide/creating-your-bot/main-file.html
 
-https://discord.com/developers/applications/1097902115789230204/information
-
+## Invite link
 https://discord.com/api/oauth2/authorize?client_id=1097902115789230204&permissions=274877975616&scope=bot%20applications.commands
 
-https://dashboard.heroku.com/new-app
-
-# roadmap / todo
-- host on heroku
