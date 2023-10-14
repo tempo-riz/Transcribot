@@ -1,4 +1,4 @@
-# discord-voice-message-to-text
+# Transcribot
 
 A simple Discord bot that transcribes voice messages to text in the following languages: English, French, Spanish, German.
 
